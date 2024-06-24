@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './tictactoe.component.html',
   styleUrl: './tictactoe.component.css'
 })
-export class TictactoeComponent {
-
+export class TictactoeComponent 
+{
+  
 }
