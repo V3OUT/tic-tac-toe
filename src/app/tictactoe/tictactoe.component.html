@@ -1,20 +1,20 @@
 <h1 class="heading">TIC TAC TOE!!</h1>
 
 <div class="playerpanel">
-    <div class="player">
-        <input type="text" class="player-input" value="PlayerA" />
+    <div class="playerA">
+        <input type="text" class="player-input" [(ngModel)]="playerA.name" [readOnly]="!playerA.isEditing" />
         <div> 
-        <button class="edit-button" >Edit</button>
+        <button class="edit-button" (click)="updateplayername('A')">{{playerA.isEditing?'Save':'Edit'}}</button>
         <button class="edit-button">X</button>
-        <button class="btn btn-success btn-circle btn-sm">.</button>
+        <button *ngIf="playerA.isturn" class="btn btn-success btn-circle btn-sm">.</button>
         </div>
     </div>
-    <div class="player">
-        <input type="text" class="player-input" value="PlayerB"/>
+    <div class="playerB">
+        <input type="text" class="player-input" [(ngModel)]="playerB.name" [readOnly]="!playerB.isEditing"/>
         <div>
-        <button class="edit-button" >Edit</button>
+        <button class="edit-button" (click)="updateplayername('B')">{{playerB.isEditing?'Save':'Edit'}}</button>
         <button class="edit-button">O</button>
-        <button class="btn btn-success btn-circle btn-sm">T</button>
+        <button *ngIf="playerB.isturn" class="btn btn-success btn-circle btn-sm">T</button>
        </div>
     </div>
 </div>
